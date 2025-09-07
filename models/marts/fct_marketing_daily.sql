@@ -33,3 +33,4 @@ left join
 {% if is_incremental() %}
     where m.date >= (select date_sub(max(date), interval 30 day) from {{ this }})
 {% endif %}
+
