@@ -1,0 +1,14 @@
+version: 2
+
+exposures:
+  - name: ecommerce_starter_report
+    type: dashboard
+    url: https://lookerstudio.google.com/report/<replace>
+    depends_on:
+      - ref('fct_orders')
+      - ref('fct_order_items')
+      - ref('fct_marketing_daily')
+      - ref('dim_customer')
+    owner:
+      name: Instructor
+      email: instructor@example.com
